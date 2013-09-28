@@ -1,0 +1,16 @@
+ name: executePHP
+ version: 1.0
+ description: No Description.
+ author: NXTGUY - VolcanicPlaza
+ website: http://volcanicplaza.com
+ 
+ main: com.volcanicplaza.executePHP.executePHP
+ database: false
+ 
+ commands:
+   executePHP:
+     description: Base command for executePHP
+     aliases: [ephp, executep]
+   verify:
+     description: Verify command for executePHP
+     aliases: [confirm, v]
