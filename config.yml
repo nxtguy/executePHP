@@ -1,0 +1,13 @@
+#executePHP Configuration File
+#Should executePHP check for updates on startup? Recommended to keep this at true.
+checkUpdate: true
+#The URL to submit the request to.
+URL: http://localhost/executePHP?name=%username%&code=%code%
+#The message displayed to the player when waiting for a response.
+verifyingMessage: '&bVerifying your code, please wait...'
+#This is the results section. You can have as little results as you want, or as much as you want.
+results:
+  success: '&aSuccessfully verifed code!'
+  incorrect: '&cIncorrect code!'
+  already-verified: '&6You have already verifed your code.'
+  error: '&4We seroiusly have no idea.'
