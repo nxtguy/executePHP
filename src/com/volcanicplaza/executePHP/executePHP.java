@@ -142,7 +142,8 @@ public class executePHP extends JavaPlugin {
 	public static String verifyCode(Player player, String code){
 		URL url;
 		try {
-			url = new URL(Config.getURL().replace("%username%", player.getName()).replace("%code%", code));
+			String uuid = player.getUniqueId().toString();
+			url = new URL(Config.getURL().replace("%username%", player.getName()).replace("%code%", code).replace("%uuid%", uuid));
 	        URLConnection yc = url.openConnection();
 	        BufferedReader in = new BufferedReader(new InputStreamReader(yc.getInputStream()));
 	       
