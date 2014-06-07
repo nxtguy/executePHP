@@ -44,16 +44,14 @@ public class executePHP extends JavaPlugin {
 		long startTime = System.currentTimeMillis();
 		Bukkit.getLogger().info("Checking for update from BukkitDev...");
 		if (Config.updateCheck() == true){
-			Updater updater = new Updater(plugin, "executePHP", this.getFile(), Updater.UpdateType.NO_DOWNLOAD, false);
+			Updater updater = new Updater(plugin, 62845, this.getFile(), Updater.UpdateType.NO_DOWNLOAD, false);
 			update = updater.getResult();
 			if (update == Updater.UpdateResult.UPDATE_AVAILABLE) {
-				name = updater.getLatestVersionString(); // Get the latest version
-				size = updater.getFileSize(); // Get latest size
-				version = updater.getLatestVersionString().substring(updater.getLatestVersionString().lastIndexOf('v') + 1);
+				name = updater.getLatestName(); // Get the latest version
+				version = updater.getLatestName().substring(updater.getLatestName().lastIndexOf('v') + 1);
 				Bukkit.getLogger().info("There is a new update available!");
 				Bukkit.getLogger().info("File name: " + name);
 				Bukkit.getLogger().info("Latest Version: " + version);
-				Bukkit.getLogger().info("File size: " + size);
 			} else if (updater.getResult() == Updater.UpdateResult.NO_UPDATE){
 				Bukkit.getLogger().info("You have the latest version of executePHP. (Yay)");
 			}
